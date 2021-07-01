@@ -20,12 +20,12 @@
 	--fs-h1: 3rem;
 	--fs-h2: 2.25rem;
 	--fs-h3: 1.25rem;
-	--fs-body: 1rem;
+	--fs-body: 1.2rem;
 
 	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1100px) {
 	:root {
 		--fs-h1: 4.5rem;
 		--fs-h2: 3.75rem;
@@ -55,6 +55,31 @@ img {
 }
 
 strong{font-weight: var(--fw-bold)}
+
+:focus {
+	outline: 3px solid var(--clr-accent);
+	outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+	display:inline-block;
+	padding: .5em 2.5em;
+	background: var(--clr-accent);
+	color: var(--clr-dark);
+	text-decoration: none;
+	cursor: pointer;
+	font-size: .8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: var(--fw-bold);
+	transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+	transform: scale(1.1);
+}
 
 /* Typography */
 
@@ -133,11 +158,11 @@ h3 {font-size: var(--fs-h3)}
 /* Skills Section */
 
 .skills{
-	background-color: var(--clr-dark);
+	background-color: #959595;
 	background-image: url(../img/flowers.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	/*background-blend-mode: multiply;*/
+	background-blend-mode: multiply;
 	color: var(--clr-light);
 	text-align: center;
 }
@@ -156,6 +181,51 @@ h3 {font-size: var(--fs-h3)}
 	background: var(--clr-accent);
 }
 
+.skills-list {
+	margin-bottom: 4em;
+}
+
+.skill {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+@media (min-width: 1100px) {
+	.skills-list {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.skill + .skill {
+		margin-left: 2em;
+	}
+}
+
+.about {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+@media (min-width: 1100px) {
+	.about {
+		display: grid;
+		grid-template-columns: 1fr 400px;
+		grid-template-areas:
+			"title img"
+			"subtitle img"
+			"text img";
+		grid-column-gap: 2em;
+	}
+
+	.section__title--about {
+		grid-area: title;
+	}
+
+	.about-image {
+		grid-area: img;
+	}	
+}
 
 
 
