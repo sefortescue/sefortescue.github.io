@@ -7,8 +7,8 @@
 /* Custom Properties */
 
 :root {
-	--ff-primary: 'Source Sans Pro', sans-serif;
-	--ff-secondary: 'Source Code Pro', monospace;
+	--ff-primary: 'Ubuntu', sans-serif;
+	--ff-secondary: 'Ubuntu', sans-serif;
 	
 	--fw-reg: 300;
 	--fw-bold: 900;
@@ -108,8 +108,7 @@ h3 {font-size: var(--fs-h3)}
 	font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--intro {
 	background: var(--clr-accent);
 	padding: .25em 1em;
 	font-family: var(--ff-secondary);
@@ -123,7 +122,9 @@ h3 {font-size: var(--fs-h3)}
 }
 
 .intro__img {
-	box-shadow: var(--bs);
+	/*box-shadow: var(--bs);*/
+	outline: 4px solid var(--clr-accent);
+	outline-offset: 3px;
 }
 
 @media (min-width: 1100px) {
@@ -147,10 +148,10 @@ h3 {font-size: var(--fs-h3)}
 
 	.section__subtitle--intro {
 		align-self: start;
-		grid-column: -1/1;
 		grid-row:2;
 		text-align: right;
 		position: relative;
+		margin-left: -12px;
 	}
 
 }
@@ -202,9 +203,16 @@ h3 {font-size: var(--fs-h3)}
 	}
 }
 
+/* About Section */
+
 .about {
 	max-width: 1100px;
 	margin: 0 auto;
+}
+
+.about-image {
+	outline: 4px solid var(--clr-accent);
+	outline-offset: 3px;
 }
 
 @media (min-width: 1100px) {
@@ -213,7 +221,6 @@ h3 {font-size: var(--fs-h3)}
 		grid-template-columns: 1fr 400px;
 		grid-template-areas:
 			"title img"
-			"subtitle img"
 			"text img";
 		grid-column-gap: 2em;
 	}
