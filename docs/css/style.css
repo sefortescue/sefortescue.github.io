@@ -101,7 +101,7 @@ h3 {font-size: var(--fs-h3)}
 
 
 .section__title {
-	margin-bottom: .25em;
+	margin-bottom: 0.25em;
 }
 
 .section__title--intro {
@@ -203,7 +203,7 @@ h3 {font-size: var(--fs-h3)}
 /* Skills Section */
 
 .skills{
-	background-color: #777777;
+	background-color: #6b6b6b;
 	background-image: url(../img/flowers.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -267,6 +267,7 @@ h3 {font-size: var(--fs-h3)}
 			"title img"
 			"text img";
 		grid-column-gap: 2em;
+		grid-row-gap: 0.1em;
 	}
 
 	.section__title--about {
@@ -275,7 +276,20 @@ h3 {font-size: var(--fs-h3)}
 
 	.about-image {
 		grid-area: img;
+	}
+	
+	.about__body {
+		margin-bottom: 10em;
 	}	
+}
+
+.about__link:link {
+	text-decoration: underline;
+	color: #993232;
+}
+
+.about__link:visited {
+	color: #660000
 }
 
 /* Projects */
@@ -286,10 +300,11 @@ h3 {font-size: var(--fs-h3)}
 	text-align: center;
 }
 
-.section__subtitle--work {
+.section__subtitle--projects {
 	color: var(--clr-accent);
 	font-weight: var(--fw-bold);
 	margin-bottom:2em;
+	margin-top: 2em;
 }
 
 .portfolio {
