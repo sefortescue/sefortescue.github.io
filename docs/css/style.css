@@ -150,6 +150,64 @@ h3 {font-size: var(--fs-h3)}
 	color: var(--clr-accent);
 }
 
+/* About Section */
+
+.about {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.about-image {
+	outline: 4px solid var(--clr-accent);
+	outline-offset: 3px;
+}
+
+@media (min-width: 1100px) {
+	.about {
+		display: grid;
+		grid-template-columns: 1fr 400px;
+		grid-template-areas:
+			"title img"
+			"text img";
+		grid-column-gap: 2em;
+		grid-row-gap: 0.1em;
+	}
+
+	.section__title--about {
+		grid-area: title;
+	}
+
+	.about-image {
+		grid-area: img;
+	}
+
+	.about__body {
+		margin-bottom: 10em;
+	}	
+}
+
+.about__link:link {
+	text-decoration: underline;
+	color: #993232;
+}
+
+.about__link:visited {
+	color: #660000
+}
+
+/* Contact Section */
+
+.contact {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.contact-image {
+	outline: 4px solid var(--clr-accent);
+	outline-offset: 3px;
+	margin-bottom: 5em;
+}
+
 /* Projects */
 
 .projects {
