@@ -43,10 +43,6 @@
 		
 
 
-
-
-
-
 		<!-- footer -->
 
 		<footer class="footer">
@@ -61,7 +57,13 @@
 			
 			</ul>
 
-			<p>&copy; Sam Fortescue 2022</p>
+			<div>
+				&copy;
+				Sam Fortescue
+				<span id="copyright">
+					<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+				</span>
+			</div>
 
 			<p class="credit">
 				Deployed with 
