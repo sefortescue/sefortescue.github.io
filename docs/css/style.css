@@ -1,0 +1,51 @@
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+	--primary: 'Ubuntu', sans-serif;
+	
+	--light: #fff;
+	--dark: #303030;
+	--vdark: #111;
+	--accent: #ffb6c1;
+
+	--fs: 1.25rem;
+}
+
+/* Generic Styles */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--vdark);
+	font-family: var(--primary);
+}
+
+/* Space */
+
+.space {
+	height: 61em;
+	background-image: url(../img/flowers.jpg);
+	background-size: cover;
+	color: var(--light);
+	text-align: center;
+}
+
+/* Footer */
+
+.footer {
+	background: var(--vdark);
+	color: var(--accent);
+	text-align: center;
+	padding: 0.5em;
+	padding-top: 1em;
+	font-size: var(--fs);
+}
